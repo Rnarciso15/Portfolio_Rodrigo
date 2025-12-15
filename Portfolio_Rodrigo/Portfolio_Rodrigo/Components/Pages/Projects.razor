@@ -11,13 +11,13 @@
 
     <div class="projects-grid">
         <div class="project-card featured">
-            <div class="project-badge">Destaque</div>
             <div class="project-header">
                 <div class="project-icon">
                     <i class="bi bi-shield-check"></i>
                 </div>
-                <div class="project-status">
-                    <span class="status-badge active">Em Produção</span>
+                <div class="project-badges-top">
+                    <span class="badge-highlight">Destaque</span>
+                    <span class="badge-status">Em Produção</span>
                 </div>
             </div>
             
@@ -47,10 +47,12 @@
 
         <!-- Placeholder para projetos futuros -->
         <div class="project-card upcoming">
-            <div class="project-badge">Em Breve</div>
             <div class="project-header">
                 <div class="project-icon">
                     <i class="bi bi-rocket"></i>
+                </div>
+                <div class="project-badges-top">
+                    <span class="badge-upcoming">Em Breve</span>
                 </div>
             </div>
             
@@ -96,22 +98,6 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
-    }
-
-    .title-icon {
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, #4F46E5, #7C3AED, #EC4899);
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
-    }
-
-    .title-icon i {
-        font-size: 1.75rem;
-        color: white;
     }
 
     .page-subtitle {
@@ -173,30 +159,12 @@
         background: linear-gradient(90deg, #EC4899, #7C3AED, #4F46E5);
     }
 
-    .project-badge {
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-        background: linear-gradient(135deg, #EC4899, #8B5CF6);
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
-    }
-
-    .project-card.upcoming .project-badge {
-        background: linear-gradient(135deg, #6366F1, #8B5CF6);
-    }
-
     .project-header {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         margin-bottom: 1.5rem;
+        gap: 1rem;
     }
 
     .project-icon {
@@ -209,6 +177,7 @@
         justify-content: center;
         box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
         transition: transform 0.3s ease;
+        flex-shrink: 0;
     }
 
     .project-card:hover .project-icon {
@@ -220,19 +189,43 @@
         color: white;
     }
 
-    .status-badge {
-        padding: 0.4rem 0.9rem;
-        border-radius: 12px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
+    /* Badges Container - Stack Vertically on Right */
+    .project-badges-top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
     }
 
-    .status-badge.active {
+    /* Badge Styles */
+    .badge-highlight,
+    .badge-status,
+    .badge-upcoming {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        display: inline-block;
+    }
+
+    .badge-highlight {
+        background: linear-gradient(135deg, #EC4899, #8B5CF6);
+        color: white;
+        box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+    }
+
+    .badge-status {
         background: rgba(16, 185, 129, 0.2);
         color: #10B981;
         border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-upcoming {
+        background: linear-gradient(135deg, #6366F1, #8B5CF6);
+        color: white;
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
     }
 
     .project-title {
@@ -340,6 +333,15 @@
 
         .page-title {
             flex-direction: column;
+        }
+
+        .project-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .project-badges-top {
+            align-items: flex-start;
         }
     }
 </style>

@@ -5,7 +5,7 @@
         <NavMenu />
     </header>
 
-    <main>
+    <main class="main-content">
         <article class="content px-4">
             @Body
         </article>
@@ -76,13 +76,29 @@
 
 <style>
     /* ========================================
+       PAGE LAYOUT - DARK BACKGROUND
+       ======================================== */
+    .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-primary);
+    }
+
+    .main-content {
+        flex: 1;
+        background: var(--bg-primary);
+        padding-top: 5.5rem; /* Espaço para o navbar fixo em desktop */
+    }
+
+    /* ========================================
        FOOTER STYLES
        ======================================== */
     .site-footer {
         background: rgba(11, 14, 20, 0.95);
         backdrop-filter: blur(20px);
         border-top: 1px solid rgba(99, 102, 241, 0.2);
-        margin-top: 6rem;
+        margin-top: 0; /* Remove o espaço branco antes do footer */
         padding: 4rem 0 0;
     }
 
@@ -236,61 +252,14 @@
         transform: scale(1.15);
     }
 
-    .footer-bottom {
-        background: rgba(6, 8, 15, 0.8);
-        border-top: 1px solid rgba(99, 102, 241, 0.15);
-        padding: 2rem 1.5rem;
-    }
-
-    .footer-bottom-content {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    }
-
-    .copyright {
-        color: var(--text-muted);
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.95rem;
-    }
-
-    .heart-icon {
-        color: #EC4899;
-        animation: heartbeat 1.5s ease-in-out infinite;
-    }
-
-    @@keyframes heartbeat {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.15); }
-    }
-
-    .footer-tech-stack {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-    }
-
-    .tech-badge {
-        padding: 0.5rem 1rem;
-        background: rgba(99, 102, 241, 0.15);
-        border: 1px solid rgba(99, 102, 241, 0.3);
-        border-radius: 8px;
-        color: #8B5CF6;
-        font-size: 0.85rem;
-        font-weight: 600;
-    }
-
     /* ========================================
        RESPONSIVE FOOTER
        ======================================== */
     @@media (max-width: 992px) {
+        .main-content {
+            padding-top: 5rem; /* Ajuste para mobile com navbar menor */
+        }
+
         .footer-content {
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
@@ -302,8 +271,12 @@
     }
 
     @@media (max-width: 640px) {
+        .main-content {
+            padding-top: 4.5rem; /* Ajuste para mobile small */
+        }
+
         .site-footer {
-            margin-top: 4rem;
+            margin-top: 0;
             padding: 3rem 0 0;
         }
 
@@ -315,19 +288,6 @@
 
         .footer-about {
             grid-column: 1;
-        }
-
-        .footer-bottom-content {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .copyright {
-            justify-content: center;
-        }
-
-        .footer-tech-stack {
-            justify-content: center;
         }
     }
 </style>

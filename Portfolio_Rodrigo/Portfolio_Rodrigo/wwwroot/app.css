@@ -3,7 +3,7 @@
    ======================================== */
 
 :root {
-    /* Dark Theme Colors - Darker Version */
+    /* Dark Theme Colors - Darker */
     --bg-primary: #050709;
     --bg-secondary: #0B0E14;
     --bg-card: rgba(11, 14, 20, 0.85);
@@ -104,6 +104,23 @@ body::after {
     background-size: 50px 50px;
     z-index: -1;
     pointer-events: none;
+}
+
+/* ========================================
+   GLOBAL PAGE CONTAINERS - DARK BACKGROUND
+   ======================================== */
+
+.page-container,
+.home-container {
+    background: transparent !important;
+}
+
+/* ========================================
+   REMOVE WHITE LINES / GAPS
+   ======================================== */
+
+.section-title {
+    margin-top: 0 !important;
 }
 
 /* ========================================
