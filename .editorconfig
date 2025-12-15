@@ -1,0 +1,23 @@
+# Visual Studio Debugger Configuration
+# This file configures exception handling for JavaScript debugging
+
+# Remove the comment below to enable Just My Code debugging
+# This prevents breaking in external JavaScript libraries
+[*.{js,ts}]
+indent_style = space
+indent_size = 2
+
+# Blazor WebAssembly specific settings
+[*.razor]
+indent_style = space
+indent_size = 4
+
+[*.cs]
+indent_style = space
+indent_size = 4
+
+# Debug settings comment
+# To prevent breaking on external JavaScript exceptions:
+# 1. Go to Debug ? Windows ? Exception Settings (Ctrl+Alt+E)
+# 2. Uncheck "JavaScript Exceptions" or specific exceptions like "AxiosError"
+# 3. Enable "Just My Code" in Tools ? Options ? Debugging ? General

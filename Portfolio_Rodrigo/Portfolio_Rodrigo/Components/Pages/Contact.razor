@@ -1,16 +1,486 @@
 ﻿@page "/contacto"
 
-<h2>Contacto</h2>
+<div class="page-container">
+    <div class="page-header">
+        <div class="profile-section">
+            <div class="profile-image-wrapper">
+                <img src="Images/Foto_perfil.jpeg" alt="Rodrigo Narciso" class="profile-image" />
+                <div class="profile-ring"></div>
+            </div>
+        </div>
+        <h2 class="page-title">
+            <span class="bi bi-envelope-fill" aria-hidden="true"></span>
+            Contacto
+        </h2>
+        <p class="page-subtitle">Vamos trabalhar juntos? Entre em contacto!</p>
+    </div>
 
-<p>
-    Para contacto profissional, utilize um dos meios abaixo:
-</p>
+    <div class="contact-content">
+        <div class="contact-info">
+            <div class="info-card email-card">
+                <div class="card-icon">
+                    <i class="bi bi-envelope-at-fill"></i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">Email</h4>
+                    <a href="mailto:rodrigoalexandrenarciso@gmail.com" class="contact-link">
+                        rodrigoalexandrenarciso@gmail.com
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <p class="card-description">Resposta garantida em 24-48 horas</p>
+                </div>
+            </div>
 
-<ul>
-    <li>Email: <a href="mailto:rodrigoalexandrenarciso@gmail.com">rodrigoalexandrenarciso@gmail.com</a></li>
-    <li>
-        LinkedIn: <a href="https://www.linkedin.com/in/rodrigo-narciso-21886a304" target="_blank">
-            linkedin.com/in/rodrigo-narciso
-        </a>
-    </li>
-</ul>
+            <div class="info-card linkedin-card">
+                <div class="card-icon">
+                    <i class="bi bi-linkedin"></i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/rodrigo-narciso-21886a304" target="_blank" class="contact-link">
+                        linkedin.com/in/rodrigo-narciso
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <p class="card-description">Perfil profissional e networking</p>
+                </div>
+            </div>
+
+            <div class="info-card github-card">
+                <div class="card-icon">
+                    <i class="bi bi-github"></i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">GitHub</h4>
+                    <a href="https://github.com/RodrigoNar" target="_blank" class="contact-link">
+                        github.com/RodrigoNar
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <p class="card-description">Portfólio de código e projetos</p>
+                </div>
+            </div>
+
+            <div class="info-card whatsapp-card">
+                <div class="card-icon">
+                    <i class="bi bi-whatsapp"></i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">WhatsApp</h4>
+                    <a href="https://wa.me/351965712134" target="_blank" class="contact-link">
+                        +351 965 712 134
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <p class="card-description">Mensagem direta e rápida</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h3 class="cta-title">Vamos desenvolver soluções de qualidade em conjunto</h3>
+                    <p class="cta-description">
+                        Encontro-me disponível para oportunidades na área do desenvolvimento .NET,
+                        bem como para a participação em projetos freelance e colaborações técnicas.
+                        Caso procure um profissional empenhado, orientado para a qualidade e para
+                        boas práticas de desenvolvimento, não hesite em entrar em contacto.
+                    </p>
+                    <div class="cta-features">
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Disponibilidade imediata</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Projetos full-stack .NET</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Compromisso com qualidade</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Código open source no GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .page-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+        animation: fadeInUp 0.6s ease-out;
+    }
+
+    .page-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .profile-section {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .profile-image-wrapper {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        animation: fadeInScale 0.8s ease-out;
+    }
+
+    .profile-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid rgba(99, 102, 241, 0.3);
+        box-shadow: 
+            0 10px 40px rgba(99, 102, 241, 0.4),
+            0 0 0 1px rgba(255, 255, 255, 0.1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        z-index: 2;
+    }
+
+    .profile-image-wrapper:hover .profile-image {
+        transform: scale(1.05);
+        box-shadow: 
+            0 15px 60px rgba(99, 102, 241, 0.6),
+            0 0 0 1px rgba(255, 255, 255, 0.2);
+        border-color: rgba(99, 102, 241, 0.6);
+    }
+
+    .profile-ring {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border-radius: 50%;
+        background: conic-gradient(
+            from 0deg,
+            #4F46E5,
+            #7C3AED,
+            #EC4899,
+            #4F46E5
+        );
+        z-index: 1;
+        opacity: 0;
+        animation: rotateRing 4s linear infinite;
+        transition: opacity 0.4s ease;
+    }
+
+    .profile-image-wrapper:hover .profile-ring {
+        opacity: 0.6;
+    }
+
+    @@keyframes rotateRing {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    @@keyframes fadeInScale {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .page-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .title-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #4F46E5, #7C3AED, #EC4899);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+    }
+
+    .title-icon i {
+        font-size: 1.75rem;
+        color: white;
+    }
+
+    .page-subtitle {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-content {
+        display: grid;
+        gap: 3rem;
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .info-card {
+        background: rgba(21, 25, 50, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        border-radius: 20px;
+        padding: 2.5rem;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        animation: fadeInUp 0.6s ease-out backwards;
+    }
+
+    .info-card:nth-child(1) { animation-delay: 0.1s; }
+    .info-card:nth-child(2) { animation-delay: 0.2s; }
+    .info-card:nth-child(3) { animation-delay: 0.3s; }
+    .info-card:nth-child(4) { animation-delay: 0.4s; }
+
+    .info-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, #4F46E5, #7C3AED, #EC4899);
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.4s ease;
+    }
+
+    .info-card:hover::before {
+        transform: scaleY(1);
+    }
+
+    .info-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+        border-color: rgba(99, 102, 241, 0.6);
+        background: rgba(30, 35, 70, 0.95);
+    }
+
+    .linkedin-card::before {
+        background: linear-gradient(180deg, #0077B5, #00A0DC);
+    }
+
+    .github-card::before {
+        background: linear-gradient(180deg, #6e5494, #8b5cf6);
+    }
+
+    .whatsapp-card::before {
+        background: linear-gradient(180deg, #25D366, #128C7E);
+    }
+
+    .card-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #4F46E5, #7C3AED);
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .info-card:hover .card-icon {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .linkedin-card .card-icon {
+        background: linear-gradient(135deg, #0077B5, #00A0DC);
+    }
+
+    .github-card .card-icon {
+        background: linear-gradient(135deg, #6e5494, #8b5cf6);
+    }
+
+    .whatsapp-card .card-icon {
+        background: linear-gradient(135deg, #25D366, #128C7E);
+    }
+
+    .card-icon i {
+        font-size: 2rem;
+        color: white;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    .contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--text-secondary);
+        font-size: 1.05rem;
+        font-weight: 600;
+        text-decoration: none;
+        margin-bottom: 0.75rem;
+        transition: all 0.3s ease;
+        word-break: break-all;
+    }
+
+    .contact-link i {
+        font-size: 1.25rem;
+        transition: transform 0.3s ease;
+    }
+
+    .contact-link:hover {
+        color: #8B5CF6;
+    }
+
+    .contact-link:hover i {
+        transform: translateX(5px);
+    }
+
+    .card-description {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        margin-top: 2rem;
+    }
+
+    .cta-card {
+        background: rgba(21, 25, 50, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        border-radius: 24px;
+        padding: 3.5rem 3rem;
+        position: relative;
+        overflow: hidden;
+        animation: fadeInUp 0.6s ease-out 0.4s backwards;
+    }
+
+    .cta-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: conic-gradient(
+            from 0deg at 50% 50%,
+            rgba(99, 102, 241, 0) 0deg,
+            rgba(99, 102, 241, 0.2) 90deg,
+            rgba(99, 102, 241, 0) 180deg
+        );
+        animation: rotate 10s linear infinite;
+        opacity: 0.5;
+    }
+
+    @@keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .cta-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .cta-title {
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 800;
+        background: linear-gradient(135deg, #4F46E5, #7C3AED, #EC4899);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-description {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 2rem;
+    }
+
+    .cta-features {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: var(--text-secondary);
+        font-size: 1.05rem;
+        font-weight: 600;
+    }
+
+    .feature i {
+        font-size: 1.5rem;
+        color: #10B981;
+        flex-shrink: 0;
+    }
+
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .page-title {
+            flex-direction: column;
+        }
+
+        .profile-image-wrapper {
+            width: 150px;
+            height: 150px;
+        }
+
+        .contact-info {
+            grid-template-columns: 1fr;
+        }
+
+        .cta-card {
+            padding: 2.5rem 2rem;
+        }
+
+        .contact-link {
+            word-break: break-word;
+        }
+    }
+</style>

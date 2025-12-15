@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Bootstrap Icons</title>
+    <link rel="stylesheet" href="lib/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #0B0E14;
+            color: white;
+        }
+        .test-icon {
+            font-size: 3rem;
+            margin: 10px;
+        }
+        .icon-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4F46E5, #7C3AED);
+            border-radius: 16px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bootstrap Icons Test</h1>
+    
+    <h2>Teste 1: Ícones Diretos</h2>
+    <i class="bi bi-patch-check-fill test-icon"></i>
+    <i class="bi bi-kanban-fill test-icon"></i>
+    <i class="bi bi-person-fill test-icon"></i>
+    <i class="bi bi-envelope-fill test-icon"></i>
+    <i class="bi bi-mortarboard-fill test-icon"></i>
+    
+    <h2>Teste 2: Ícones em Boxes (Como no Portfolio)</h2>
+    <div class="icon-box">
+        <i class="bi bi-patch-check-fill" style="font-size: 2rem; color: white;"></i>
+    </div>
+    <div class="icon-box">
+        <i class="bi bi-kanban-fill" style="font-size: 2rem; color: white;"></i>
+    </div>
+    <div class="icon-box">
+        <i class="bi bi-person-fill" style="font-size: 2rem; color: white;"></i>
+    </div>
+    <div class="icon-box">
+        <i class="bi bi-envelope-fill" style="font-size: 2rem; color: white;"></i>
+    </div>
+    <div class="icon-box">
+        <i class="bi bi-mortarboard-fill" style="font-size: 2rem; color: white;"></i>
+    </div>
+    
+    <h2>Informações de Debug</h2>
+    <div id="debug"></div>
+    
+    <script>
+        // Verificar se o font está carregado
+        document.fonts.ready.then(() => {
+            const fontLoaded = document.fonts.check('1rem bootstrap-icons');
+            document.getElementById('debug').innerHTML = `
+                <p>Bootstrap Icons Font Loaded: <strong>${fontLoaded ? 'SIM ?' : 'NÃO ?'}</strong></p>
+                <p>Total Fonts Loaded: <strong>${document.fonts.size}</strong></p>
+            `;
+        });
+    </script>
+</body>
+</html>

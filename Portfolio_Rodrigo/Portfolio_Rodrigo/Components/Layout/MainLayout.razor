@@ -10,9 +10,58 @@
             @Body
         </article>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section footer-about">
+                <h3 class="footer-title">Rodrigo Narciso</h3>
+                <p class="footer-description">
+                    Desenvolvedor de Software especializado em .NET, 
+                    focado em criar soluções robustas e escaláveis.
+                </p>
+                <div class="footer-badge">
+                    <i class="bi bi-code-slash"></i>
+                    <span>Disponível para oportunidades</span>
+                </div>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4 class="footer-section-title">Navegação</h4>
+                <ul class="footer-nav">
+                    <li><NavLink href="sobre">Sobre Mim</NavLink></li>
+                    <li><NavLink href="projetos">Projetos</NavLink></li>
+                    <li><NavLink href="formacao">Formação</NavLink></li>
+                    <li><NavLink href="certificacoes">Certificações</NavLink></li>
+                    <li><NavLink href="contacto">Contacto</NavLink></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-social">
+                <h4 class="footer-section-title">Conecte-se</h4>
+                <div class="social-links">
+                    <a href="https://github.com/Rnarciso15" target="_blank" class="social-link github" title="GitHub">
+                        <i class="bi bi-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rodrigo-narciso-21886a304" target="_blank" class="social-link linkedin" title="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:rodrigoalexandrenarciso@gmail.com" class="social-link email" title="Email">
+                        <i class="bi bi-envelope-at-fill"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://wa.me/351965712134" target="_blank" class="social-link whatsapp" title="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
 
-<a href="https://wa.me/351962055189"
+<a href="https://wa.me/351965712134"
    target="_blank"
    class="whatsapp-float"
    aria-label="Contactar via WhatsApp">
@@ -24,3 +73,261 @@
     <a href="." class="reload">Reload</a>
     <span class="dismiss">🗙</span>
 </div>
+
+<style>
+    /* ========================================
+       FOOTER STYLES
+       ======================================== */
+    .site-footer {
+        background: rgba(11, 14, 20, 0.95);
+        backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(99, 102, 241, 0.2);
+        margin-top: 6rem;
+        padding: 4rem 0 0;
+    }
+
+    .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1.5rem 3rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1.5fr;
+        gap: 4rem;
+    }
+
+    .footer-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .footer-title {
+        font-size: 1.75rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #4F46E5, #7C3AED, #EC4899);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin: 0;
+    }
+
+    .footer-description {
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .footer-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1.25rem;
+        background: rgba(16, 185, 129, 0.15);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        border-radius: 12px;
+        color: #34D399;
+        font-weight: 600;
+        font-size: 0.9rem;
+        width: fit-content;
+    }
+
+    .footer-badge i {
+        font-size: 1.125rem;
+    }
+
+    .footer-section-title {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: white;
+        margin: 0 0 0.5rem 0;
+    }
+
+    .footer-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .footer-nav a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+    }
+
+    .footer-nav a::before {
+        content: '→';
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: all 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+        color: #8B5CF6;
+        padding-left: 0.5rem;
+    }
+
+    .footer-nav a:hover::before {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.875rem 1.25rem;
+        background: rgba(21, 25, 50, 0.6);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        border-radius: 12px;
+        text-decoration: none;
+        color: var(--text-secondary);
+        font-weight: 600;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .social-link i {
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .social-link.github:hover {
+        background: linear-gradient(135deg, rgba(110, 84, 148, 0.2), rgba(139, 92, 246, 0.2));
+        border-color: #8b5cf6;
+        color: #a78bfa;
+        transform: translateX(5px);
+    }
+
+    .social-link.linkedin:hover {
+        background: linear-gradient(135deg, rgba(0, 119, 181, 0.2), rgba(0, 160, 220, 0.2));
+        border-color: #0077B5;
+        color: #00A0DC;
+        transform: translateX(5px);
+    }
+
+    .social-link.email:hover {
+        background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(124, 58, 237, 0.2));
+        border-color: #7C3AED;
+        color: #A78BFA;
+        transform: translateX(5px);
+    }
+
+    .social-link.whatsapp:hover {
+        background: linear-gradient(135deg, rgba(37, 211, 102, 0.2), rgba(18, 140, 126, 0.2));
+        border-color: #25D366;
+        color: #34D399;
+        transform: translateX(5px);
+    }
+
+    .social-link:hover i {
+        transform: scale(1.15);
+    }
+
+    .footer-bottom {
+        background: rgba(6, 8, 15, 0.8);
+        border-top: 1px solid rgba(99, 102, 241, 0.15);
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-bottom-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .copyright {
+        color: var(--text-muted);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .heart-icon {
+        color: #EC4899;
+        animation: heartbeat 1.5s ease-in-out infinite;
+    }
+
+    @@keyframes heartbeat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.15); }
+    }
+
+    .footer-tech-stack {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .tech-badge {
+        padding: 0.5rem 1rem;
+        background: rgba(99, 102, 241, 0.15);
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        border-radius: 8px;
+        color: #8B5CF6;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
+    /* ========================================
+       RESPONSIVE FOOTER
+       ======================================== */
+    @@media (max-width: 992px) {
+        .footer-content {
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-about {
+            grid-column: 1 / -1;
+        }
+    }
+
+    @@media (max-width: 640px) {
+        .site-footer {
+            margin-top: 4rem;
+            padding: 3rem 0 0;
+        }
+
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            padding-bottom: 2rem;
+        }
+
+        .footer-about {
+            grid-column: 1;
+        }
+
+        .footer-bottom-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .copyright {
+            justify-content: center;
+        }
+
+        .footer-tech-stack {
+            justify-content: center;
+        }
+    }
+</style>
