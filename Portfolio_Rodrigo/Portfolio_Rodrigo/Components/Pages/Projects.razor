@@ -1,15 +1,347 @@
 ﻿@page "/projetos"
 
-<h2>Projetos</h2>
+<div class="page-container">
+    <div class="page-header">
+        <h2 class="page-title">
+            <span class="bi bi-kanban-fill" aria-hidden="true"></span>
+            Projetos
+        </h2>
+        <p class="page-subtitle">Soluções desenvolvidas com foco em qualidade e inovação</p>
+    </div>
 
-<h4>TradeGuard</h4>
-<p>
-    Plataforma web para venda segura de produtos usados, com sistema de
-    pagamentos condicionados, comunicação em tempo real e validação por
-    moderador.
-</p>
-<p>
-    <a href="https://tradeguard.runasp.net/" target="_blank">Visitar projeto</a>
-</p>
+    <div class="projects-grid">
+        <div class="project-card featured">
+            <div class="project-header">
+                <div class="project-icon">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+                <div class="project-badges-top">
+                    <span class="badge-highlight">Destaque</span>
+                    <span class="badge-status">Em Produção</span>
+                </div>
+            </div>
+            
+            <h4 class="project-title">TradeGuard</h4>
+            
+            <p class="project-description">
+                Plataforma web para venda segura de produtos usados, com sistema de
+                pagamentos condicionados, comunicação em tempo real e validação por
+                moderador. Desenvolvimento full-stack com .NET e arquitetura moderna.
+            </p>
+            
+            <div class="project-tags">
+                <span class="tag">.NET</span>
+                <span class="tag">C#</span>
+                <span class="tag">ASP.NET MVC</span>
+                <span class="tag">SQL Server</span>
+                <span class="tag">SignalR</span>
+            </div>
+            
+            <div class="project-footer">
+                <a href="https://tradeguard.runasp.net/" target="_blank" class="project-link primary">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                    Visitar Projeto
+                </a>
+            </div>
+        </div>
 
-<hr />
+        <!-- Placeholder para projetos futuros -->
+        <div class="project-card upcoming">
+            <div class="project-header">
+                <div class="project-icon">
+                    <i class="bi bi-rocket"></i>
+                </div>
+                <div class="project-badges-top">
+                    <span class="badge-upcoming">Em Breve</span>
+                </div>
+            </div>
+            
+            <h4 class="project-title">Próximos Projetos</h4>
+            
+            <p class="project-description">
+                Novos projetos em desenvolvimento. Fique atento para atualizações com
+                soluções em .NET.
+            </p>
+            
+            <div class="project-footer">
+                <span class="coming-soon">
+                    <i class="bi bi-hourglass-split"></i>
+                    Em desenvolvimento
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .page-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+        animation: fadeInUp 0.6s ease-out;
+    }
+
+    .page-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .page-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .project-card {
+        background: rgba(21, 25, 50, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        border-radius: 24px;
+        padding: 2.5rem;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        animation: fadeInUp 0.6s ease-out backwards;
+    }
+
+    .project-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #4F46E5, #7C3AED, #EC4899);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+    }
+
+    .project-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .project-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+        border-color: rgba(99, 102, 241, 0.6);
+        background: rgba(30, 35, 70, 0.95);
+    }
+
+    .project-card.featured {
+        border-color: rgba(236, 72, 153, 0.4);
+    }
+
+    .project-card.featured::before {
+        background: linear-gradient(90deg, #EC4899, #7C3AED, #4F46E5);
+    }
+
+    .project-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        gap: 1rem;
+    }
+
+    .project-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #4F46E5, #7C3AED);
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .project-card:hover .project-icon {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .project-icon i {
+        font-size: 2rem;
+        color: white;
+    }
+
+    /* Badges Container - Stack Vertically on Right */
+    .project-badges-top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+    }
+
+    /* Badge Styles */
+    .badge-highlight,
+    .badge-status,
+    .badge-upcoming {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        display: inline-block;
+    }
+
+    .badge-highlight {
+        background: linear-gradient(135deg, #EC4899, #8B5CF6);
+        color: white;
+        box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+    }
+
+    .badge-status {
+        background: rgba(16, 185, 129, 0.2);
+        color: #10B981;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-upcoming {
+        background: linear-gradient(135deg, #6366F1, #8B5CF6);
+        color: white;
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    }
+
+    .project-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    .project-description {
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tag {
+        background: rgba(99, 102, 241, 0.15);
+        color: #8B5CF6;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .tag:hover {
+        background: rgba(99, 102, 241, 0.25);
+        transform: translateY(-2px);
+    }
+
+    .project-footer {
+        margin-top: auto;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2rem;
+        border-radius: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 2px solid transparent;
+    }
+
+    .project-link.primary {
+        background: linear-gradient(135deg, #4F46E5, #7C3AED);
+        color: white;
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+    }
+
+    .project-link.primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);
+        background: linear-gradient(135deg, #6366F1, #8B5CF6);
+    }
+
+    .coming-soon {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--text-muted);
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    .coming-soon i {
+        font-size: 1.25rem;
+        animation: rotate 2s linear infinite;
+    }
+
+    @@keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .page-title {
+            flex-direction: column;
+        }
+
+        .project-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .project-badges-top {
+            align-items: flex-start;
+        }
+    }
+</style>

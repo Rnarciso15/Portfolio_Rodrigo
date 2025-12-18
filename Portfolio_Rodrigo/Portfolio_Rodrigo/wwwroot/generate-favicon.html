@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerador de Favicon - Rodrigo Narciso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #1a1a2e;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        canvas {
+            border: 2px solid #4F46E5;
+            border-radius: 8px;
+        }
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .preview-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        button {
+            background: linear-gradient(135deg, #4F46E5, #7C3AED);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        .instructions {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 800px;
+        }
+        h1 {
+            background: linear-gradient(135deg, #4F46E5, #7C3AED, #EC4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <h1>?? Gerador de Favicon - RN</h1>
+    
+    <div class="instructions">
+        <h3>?? Instruções:</h3>
+        <ol>
+            <li>Clique nos botões abaixo para gerar cada tamanho de favicon</li>
+            <li>Os ficheiros serão descarregados automaticamente</li>
+            <li>Mova os ficheiros para a pasta: <code>wwwroot/</code></li>
+        </ol>
+    </div>
+
+    <div class="preview-grid">
+        <div class="preview-item">
+            <h3>16x16</h3>
+            <canvas id="canvas16" width="16" height="16"></canvas>
+            <br><br>
+            <button onclick="downloadFavicon(16)">?? Download 16x16</button>
+        </div>
+        
+        <div class="preview-item">
+            <h3>32x32</h3>
+            <canvas id="canvas32" width="32" height="32"></canvas>
+            <br><br>
+            <button onclick="downloadFavicon(32)">?? Download 32x32</button>
+        </div>
+        
+        <div class="preview-item">
+            <h3>180x180 (Apple)</h3>
+            <canvas id="canvas180" width="180" height="180"></canvas>
+            <br><br>
+            <button onclick="downloadFavicon(180)">?? Download Apple Icon</button>
+        </div>
+    </div>
+
+    <script>
+        function drawFavicon(size) {
+            const canvas = document.getElementById(`canvas${size}`);
+            const ctx = canvas.getContext('2d');
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#4F46E5');
+            gradient.addColorStop(0.5, '#7C3AED');
+            gradient.addColorStop(1, '#EC4899');
+            
+            // Draw rounded rectangle background
+            const radius = size * 0.2;
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.roundRect(0, 0, size, size, radius);
+            ctx.fill();
+            
+            // Draw text
+            ctx.fillStyle = 'white';
+            ctx.font = `bold ${size * 0.45}px Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('RN', size / 2, size / 2 + size * 0.05);
+        }
+
+        function downloadFavicon(size) {
+            const canvas = document.getElementById(`canvas${size}`);
+            const link = document.createElement('a');
+            
+            if (size === 180) {
+                link.download = 'apple-touch-icon.png';
+            } else if (size === 16) {
+                link.download = 'favicon-16x16.png';
+            } else if (size === 32) {
+                link.download = 'favicon-32x32.png';
+            }
+            
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Draw all sizes on page load
+        window.onload = function() {
+            drawFavicon(16);
+            drawFavicon(32);
+            drawFavicon(180);
+        };
+    </script>
+</body>
+</html>
