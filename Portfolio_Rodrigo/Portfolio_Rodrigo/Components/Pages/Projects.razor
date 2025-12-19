@@ -10,6 +10,7 @@
     </div>
 
     <div class="projects-grid">
+        <!-- TradeGuard - Projeto em Produção -->
         <div class="project-card featured">
             <div class="project-header">
                 <div class="project-icon">
@@ -45,6 +46,78 @@
             </div>
         </div>
 
+        <!-- Java Task Manager -->
+        <div class="project-card java-project">
+            <div class="project-header">
+                <div class="project-icon java-icon">
+                    <i class="bi bi-list-check"></i>
+                </div>
+                <div class="project-badges-top">
+                    <span class="badge-java">Java</span>
+                    <span class="badge-academic">Académico</span>
+                </div>
+            </div>
+            
+            <h4 class="project-title">Java Task Manager</h4>
+            
+            <p class="project-description">
+                Gestor de tarefas desenvolvido em Java com persistência em XML e geração
+                de relatórios HTML. Implementa POO avançada, padrões de design (DAO, Service Layer)
+                e tratamento robusto de exceções personalizadas.
+            </p>
+            
+            <div class="project-tags">
+                <span class="tag java-tag">Java 8+</span>
+                <span class="tag java-tag">POO</span>
+                <span class="tag java-tag">XML/DOM</span>
+                <span class="tag java-tag">HTML Reports</span>
+                <span class="tag java-tag">Design Patterns</span>
+            </div>
+            
+            <div class="project-footer">
+                <a href="https://github.com/Rnarciso15/java-task-manager" target="_blank" class="project-link github">
+                    <i class="bi bi-github"></i>
+                    Ver no GitHub
+                </a>
+            </div>
+        </div>
+
+        <!-- Sistema de Gestão Hoteleira -->
+        <div class="project-card java-project">
+            <div class="project-header">
+                <div class="project-icon java-icon">
+                    <i class="bi bi-building"></i>
+                </div>
+                <div class="project-badges-top">
+                    <span class="badge-java">Java</span>
+                    <span class="badge-academic">Académico</span>
+                </div>
+            </div>
+            
+            <h4 class="project-title">Sistema de Gestão Hoteleira</h4>
+            
+            <p class="project-description">
+                Aplicação desktop para gestão completa de hotel desenvolvida em Java Swing.
+                Inclui gestão de reservas, hóspedes, quartos, faturação e relatórios gerenciais
+                com integração MySQL via JDBC e arquitetura MVC.
+            </p>
+            
+            <div class="project-tags">
+                <span class="tag java-tag">Java Swing</span>
+                <span class="tag java-tag">MySQL</span>
+                <span class="tag java-tag">JDBC</span>
+                <span class="tag java-tag">MVC</span>
+                <span class="tag java-tag">DAO Pattern</span>
+            </div>
+            
+            <div class="project-footer">
+                <a href="https://github.com/Rnarciso15/sistema-gestao-hotel-java" target="_blank" class="project-link github">
+                    <i class="bi bi-github"></i>
+                    Ver no GitHub
+                </a>
+            </div>
+        </div>
+
         <!-- Placeholder para projetos futuros -->
         <div class="project-card upcoming">
             <div class="project-header">
@@ -60,7 +133,7 @@
             
             <p class="project-description">
                 Novos projetos em desenvolvimento. Fique atento para atualizações com
-                soluções em .NET.
+                soluções em .NET e outras tecnologias.
             </p>
             
             <div class="project-footer">
@@ -343,5 +416,58 @@
         .project-badges-top {
             align-items: flex-start;
         }
+    }
+
+    /* Java Project Specific Styles */
+    .project-card.java-project {
+        border-color: rgba(237, 139, 0, 0.3);
+    }
+
+    .project-card.java-project::before {
+        background: linear-gradient(90deg, #ED8B00, #F59E0B, #FBBF24);
+    }
+
+    .project-card.java-project:hover {
+        border-color: rgba(237, 139, 0, 0.6);
+        box-shadow: 0 20px 60px rgba(237, 139, 0, 0.3);
+    }
+
+    .project-icon.java-icon {
+        background: linear-gradient(135deg, #ED8B00, #F59E0B);
+        box-shadow: 0 8px 25px rgba(237, 139, 0, 0.4);
+    }
+
+    .badge-java {
+        background: linear-gradient(135deg, #ED8B00, #F59E0B);
+        color: white;
+        box-shadow: 0 4px 15px rgba(237, 139, 0, 0.4);
+    }
+
+    .badge-academic {
+        background: rgba(59, 130, 246, 0.2);
+        color: #60A5FA;
+        border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .tag.java-tag {
+        background: rgba(237, 139, 0, 0.15);
+        color: #FBBF24;
+        border-color: rgba(237, 139, 0, 0.3);
+    }
+
+    .tag.java-tag:hover {
+        background: rgba(237, 139, 0, 0.25);
+    }
+
+    .project-link.github {
+        background: linear-gradient(135deg, #6e5494, #8b5cf6);
+        color: white;
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+    }
+
+    .project-link.github:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(139, 92, 246, 0.5);
+        background: linear-gradient(135deg, #8b5cf6, #a78bfa);
     }
 </style>
