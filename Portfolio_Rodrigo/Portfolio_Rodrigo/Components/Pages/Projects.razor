@@ -356,6 +356,15 @@
         font-size: 0.75rem;
     }
 
+    /* Estilo do badge Blazor corrigido */
+    .badge-blazor {
+        background: linear-gradient(135deg, #5B21B6, #7C3AED);
+        color: white;
+        box-shadow: 0 4px 15px rgba(91, 33, 182, 0.4);
+        padding: 0.4rem 0.85rem;
+        font-size: 0.75rem;
+    }
+
     .project-title {
         font-size: 1.75rem;
         font-weight: 700;
@@ -421,6 +430,18 @@
         transform: translateY(-3px);
         box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);
         background: linear-gradient(135deg, #6366F1, #8B5CF6);
+    }
+
+    .project-link.github {
+        background: linear-gradient(135deg, #6e5494, #8b5cf6);
+        color: white;
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+    }
+
+    .project-link.github:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(139, 92, 246, 0.5);
+        background: linear-gradient(135deg, #8b5cf6, #a78bfa);
     }
 
     .coming-soon {
@@ -519,25 +540,5 @@
     .project-icon.blazor-icon {
         background: linear-gradient(135deg, #5B21B6, #7C3AED);
         box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
-    }
-
-    .badge-blazor {
-        background: linear-gradient(135deg, #5B21B6, #7C3AED);
-        color: white;
-        box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
-        padding: 0.4rem 0.85rem;
-        font-size: 0.75rem;
-    }
-
-    .project-link.github {
-        background: linear-gradient(135deg, #6e5494, #8b5cf6);
-        color: white;
-        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
-    }
-
-    .project-link.github:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 35px rgba(139, 92, 246, 0.5);
-        background: linear-gradient(135deg, #8b5cf6, #a78bfa);
     }
 </style>
