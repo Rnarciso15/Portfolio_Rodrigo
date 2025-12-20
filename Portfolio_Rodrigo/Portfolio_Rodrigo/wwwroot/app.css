@@ -535,14 +535,7 @@ a:hover {
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.15);
-    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
     color: white;
-}
-
-.whatsapp-float:hover::before {
-    opacity: 1;
-    animation: pulse 1.5s infinite;
 }
 
 @keyframes float {
