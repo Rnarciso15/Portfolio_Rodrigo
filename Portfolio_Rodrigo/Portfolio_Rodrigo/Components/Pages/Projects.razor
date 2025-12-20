@@ -46,6 +46,43 @@
             </div>
         </div>
 
+        <!-- GearUp - Projeto Blazor em Produção -->
+        <div class="project-card featured blazor-project">
+            <div class="project-header">
+                <div class="project-icon blazor-icon">
+                    <i class="bi bi-gear-fill"></i>
+                </div>
+                <div class="project-badges-top">
+                    <span class="badge-blazor">Blazor</span>
+                    <span class="badge-status">Em Produção</span>
+                </div>
+            </div>
+            
+            <h4 class="project-title">GearUp</h4>
+            
+            <p class="project-description">
+                Aplicação web full-stack desenvolvida em Blazor com autenticação JWT avançada,
+                dashboard interativo e gestão robusta de dados. Sistema completo de autenticação,
+                autorização, e gestão de sessões com arquitetura em camadas.
+            </p>
+            
+            <div class="project-tags">
+                <span class="tag">Blazor</span>
+                <span class="tag">C#</span>
+                <span class="tag">.NET 10</span>
+                <span class="tag">JWT Auth</span>
+                <span class="tag">Entity Framework</span>
+                <span class="tag">SQL Server</span>
+            </div>
+            
+            <div class="project-footer">
+                <a href="https://gearup.tryasp.net/" target="_blank" class="project-link primary">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                    Visitar Projeto
+                </a>
+            </div>
+        </div>
+
         <!-- Java Task Manager -->
         <div class="project-card java-project">
             <div class="project-header">
@@ -463,6 +500,33 @@
 
     .tag.java-tag:hover {
         background: rgba(237, 139, 0, 0.25);
+    }
+
+    /* Blazor Project Specific Styles */
+    .project-card.blazor-project {
+        border-color: rgba(91, 33, 182, 0.4);
+    }
+
+    .project-card.blazor-project::before {
+        background: linear-gradient(90deg, #5B21B6, #7C3AED, #A855F7);
+    }
+
+    .project-card.blazor-project:hover {
+        border-color: rgba(91, 33, 182, 0.6);
+        box-shadow: 0 20px 60px rgba(124, 58, 237, 0.4);
+    }
+
+    .project-icon.blazor-icon {
+        background: linear-gradient(135deg, #5B21B6, #7C3AED);
+        box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+    }
+
+    .badge-blazor {
+        background: linear-gradient(135deg, #5B21B6, #7C3AED);
+        color: white;
+        box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+        padding: 0.4rem 0.85rem;
+        font-size: 0.75rem;
     }
 
     .project-link.github {
