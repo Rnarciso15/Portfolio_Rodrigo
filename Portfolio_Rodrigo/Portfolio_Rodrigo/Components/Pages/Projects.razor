@@ -155,6 +155,43 @@
             </div>
         </div>
 
+        <!-- HomeHub - Projeto Pessoal -->
+        <div class="project-card personal-project">
+            <div class="project-header">
+                <div class="project-icon personal-icon">
+                    <i class="bi bi-house-heart-fill"></i>
+                </div>
+                <div class="project-badges-top">
+                    <span class="badge-csharp">C#</span>
+                    <span class="badge-personal">Pessoal</span>
+                </div>
+            </div>
+            
+            <h4 class="project-title">HomeHub</h4>
+            
+            <p class="project-description">
+                Aplicação web para gestão integrada de tarefas domésticas, calendários, inventário e 
+                automação residencial. Arquitetura em camadas (Clean Architecture) com princípios SOLID, 
+                seguindo boas práticas de engenharia de software.
+            </p>
+            
+            <div class="project-tags">
+                <span class="tag">ASP.NET Core</span>
+                <span class="tag">C#</span>
+                <span class="tag">.NET 8</span>
+                <span class="tag">Clean Architecture</span>
+                <span class="tag">Entity Framework</span>
+                <span class="tag">SOLID</span>
+            </div>
+            
+            <div class="project-footer">
+                <a href="https://github.com/Rnarciso15/HomeHub" target="_blank" class="project-link github">
+                    <i class="bi bi-github"></i>
+                    Ver no GitHub
+                </a>
+            </div>
+        </div>
+
         <!-- Placeholder para projetos futuros -->
         <div class="project-card upcoming">
             <div class="project-header">
@@ -540,5 +577,32 @@
     .project-icon.blazor-icon {
         background: linear-gradient(135deg, #5B21B6, #7C3AED);
         box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+    }
+
+    /* Personal Project Specific Styles */
+    .project-card.personal-project {
+        border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .project-card.personal-project::before {
+        background: linear-gradient(90deg, #10B981, #059669, #047857);
+    }
+
+    .project-card.personal-project:hover {
+        border-color: rgba(16, 185, 129, 0.6);
+        box-shadow: 0 20px 60px rgba(16, 185, 129, 0.3);
+    }
+
+    .project-icon.personal-icon {
+        background: linear-gradient(135deg, #10B981, #059669);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    }
+
+    .badge-personal {
+        background: rgba(16, 185, 129, 0.2);
+        color: #34D399;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        padding: 0.4rem 0.85rem;
+        font-size: 0.75rem;
     }
 </style>
