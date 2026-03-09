@@ -1,11 +1,12 @@
 ﻿<nav class="navbar">
-    <div class="navbar-container">
+    <div class="navbar-inner">
         <a class="navbar-brand" href="">
-            Rodrigo Narciso
+            <span class="brand-dot"></span>
+            <span class="brand-text">Rodrigo Narciso</span>
         </a>
-        
-        <input type="checkbox" id="navbar-toggle" class="navbar-toggler" aria-label="Menu de navegação" />
-        <label for="navbar-toggle" class="navbar-toggler-label">
+
+        <input type="checkbox" id="navbar-toggle" class="navbar-toggle" aria-label="Abrir menu de navegação" />
+        <label for="navbar-toggle" class="navbar-toggle-label">
             <span></span>
             <span></span>
             <span></span>
@@ -13,34 +14,39 @@
 
         <div class="nav-menu">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill" aria-hidden="true"></span>
-                Home
+                <span class="nav-icon bi bi-house-door-fill" aria-hidden="true"></span>
+                <span class="nav-text">Início</span>
             </NavLink>
 
             <NavLink class="nav-link" href="sobre">
-                <span class="bi bi-person-fill" aria-hidden="true"></span>
-                Sobre mim
+                <span class="nav-icon bi bi-person-fill" aria-hidden="true"></span>
+                <span class="nav-text">Sobre mim</span>
             </NavLink>
 
             <NavLink class="nav-link" href="projetos">
-                <span class="bi bi-kanban-fill" aria-hidden="true"></span>
-                Projetos
+                <span class="nav-icon bi bi-kanban-fill" aria-hidden="true"></span>
+                <span class="nav-text">Projetos</span>
             </NavLink>
 
             <NavLink class="nav-link" href="formacao">
-                <span class="bi bi-mortarboard-fill" aria-hidden="true"></span>
-                Formação
+                <span class="nav-icon bi bi-mortarboard-fill" aria-hidden="true"></span>
+                <span class="nav-text">Formação</span>
             </NavLink>
 
             <NavLink class="nav-link" href="certificacoes">
-                <span class="bi bi-patch-check-fill" aria-hidden="true"></span>
-                Certificações
+                <span class="nav-icon bi bi-patch-check-fill" aria-hidden="true"></span>
+                <span class="nav-text">Certificações</span>
             </NavLink>
 
             <NavLink class="nav-link" href="contacto">
-                <span class="bi bi-envelope-fill" aria-hidden="true"></span>
-                Contacto
+                <span class="nav-icon bi bi-envelope-fill" aria-hidden="true"></span>
+                <span class="nav-text">Contacto</span>
             </NavLink>
+
+            <a href="contacto" class="nav-cta">
+                <span class="bi bi-send-fill" aria-hidden="true"></span>
+                <span>Falar comigo</span>
+            </a>
         </div>
     </div>
 </nav>
